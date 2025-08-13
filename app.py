@@ -55,7 +55,7 @@ def load_faiss_index(index_dir):
 st.set_page_config(page_title="📄 Surendar's AI App", page_icon="🤖", layout="wide")
 st.title("🤖 Surendar's AI Assistant")
 
-# Bot selection moved to main screen
+# Bot selection placed directly under the title
 bot_choice = st.radio(
     "Choose Bot Mode:",
     ["Document Q&A Bot", "Surendar Bot"],
@@ -118,3 +118,4 @@ elif bot_choice == "Surendar Bot":
             st.write(answer)
     else:
         st.error("FAISS index not found. Please create one in 'faiss_index' folder.")
+
